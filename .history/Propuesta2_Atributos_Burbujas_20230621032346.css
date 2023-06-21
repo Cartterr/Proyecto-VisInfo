@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    fill: #1f77b4;
+}
+
+.median {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+.axis text {
+    font-size: 13px;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}

@@ -1,0 +1,20 @@
+body {
+    font: 10px sans-serif;
+    background-color: #222;
+    color: #fff;
+}
+
+.dot {
+    stroke: #000;
+}
+
+.axis text {
+    fill: #fff;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
