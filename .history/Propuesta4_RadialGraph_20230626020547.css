@@ -1,0 +1,23 @@
+body {
+    margin: 0 auto;
+    background-color: #f9d3a7;
+    max-width: 80%;
+    min-width: 500px;
+    text-align: center;
+}
+
+.response {
+    text-align: start;
+    border: solid gray 2px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.row-label {
+    font-weight: bold;
+}
+
+.column-label {
+    font-weight: bold;
+    text-align: left;
+}

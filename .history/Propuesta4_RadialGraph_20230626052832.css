@@ -1,0 +1,100 @@
+body {
+    background-color: #222;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+#radialGraph {
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.axisLabel {
+    fill: white;
+}
+
+.pokemonPath {
+    fill-opacity: 0.4;
+}
+
+#searchContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchbox {
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px; 
+}
+
+
+#pokemonSearch {
+    color: black;
+}
+
+#addPokemon {
+    color: black;
+}
+
+#pokemonList {
+    height: 550px;
+    overflow-y: scroll;
+    position: absolute;
+    left: 50px;
+    top: 90px;
+    width: 200px;
+}
+
+#pokemonList button {
+    z-index: -1000;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 5px 10px;
+    margin: 2px 0;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#pokemonList button:hover {
+    background-color: #555;
+}
+
+#pokemonList button:active, #pokemonList button.highlight {
+    background-color: #ffc107;
+}
+
+.awesomplete .awesomplete-item, .awesomplete .awesomplete-item[aria-selected="true"] {
+    z-index: 1000;
+    color: #000;
+}
+
+.awesomplete {
+    z-index: 1000;
+    color: black;
+}
+
+svg {
+    position: relative;
+    left: 250px;
+}
+
+#analyzedPokemons {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    color: white;
+}
+
