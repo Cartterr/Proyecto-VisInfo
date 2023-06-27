@@ -1,5 +1,5 @@
 var svgWidth = 800;
-var svgHeight = 800;
+var svgHeight = 900;
 var chartWidth = 600;
 var chartHeight = 600;
 var cellPadding = 5;
@@ -17,7 +17,7 @@ d3.csv("typing_chart.csv").then(function(data) {
               .attr("height", svgHeight);
 
   var chartX = (svgWidth - chartWidth) / 2;
-  var chartY = (svgHeight - chartHeight) / 2;
+  var chartY = (svgHeight - chartHeight - 100) / 2; // Reducir 100 para dejar espacio para la leyenda
 
   var chartGroup = svg.append("g")
                       .attr("transform", "translate(" + chartX + "," + chartY + ")");
@@ -35,6 +35,8 @@ d3.csv("typing_chart.csv").then(function(data) {
        .attr("x", function(d, i) { return i * (chartWidth / types.length); })
        .attr("width", chartWidth / types.length)
        .attr("height", chartHeight / rows.length)
+       .style("stroke", "black")
+       .style("stroke-width", "0.1")
        .style("fill", function(d) { return colorScale(d.value); });
 
   // Agrega etiquetas de texto sobre las celdas
@@ -73,4 +75,34 @@ d3.csv("typing_chart.csv").then(function(data) {
             .attr("dy", "0.35em")
             .attr("transform", function(d, i) { return "rotate(-90," + ((i + 0.5) * (chartWidth / types.length)) + "," + (-columnLabelPadding) + ")"; })
             .text(function(d) { return d; });
+
+  // Agregar leyenda
+  var legendX = chartX + chartWidth / 4;
+  var legendY = chartY + chartHeight + 30; // Ajustar posición vertical de la leyenda
+  
+  var legend = svg.append("g")
+                  .attr("class", "legend")
+                  .attr("transform", "translate(" + legendX + "," + legendY + ")");
+  
+  var legendItems = legend.selectAll(".legend-item")
+                          .data([0, 0.5, 1, 2])
+                          .enter()
+                          .append("g")
+                          .attr("class", "legend-item")
+                          .attr("transform", function(d, i) { return "translate(" + i * 80 + ", 0)"; });
+  
+  legendItems.append("rect")
+             .attr("width", 20)
+             .attr("height", 20)
+             .style("stroke", "black")
+             .style("stroke-width", "0.1")
+             .attr("fill", function(d) { return colorScale(d); });
+  
+  legendItems.append("text")
+             .attr("x", 30)
+             .attr("y", 15)
+             .attr("class", "row-label")
+             .attr("text-anchor", "start")
+             .attr("dominant-baseline", "auto")
+             .text(function(d) { return d; });
 });

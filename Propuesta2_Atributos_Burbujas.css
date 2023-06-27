@@ -1,7 +1,9 @@
 body {
-    font: 10px sans-serif;
-    background-color: #222;
-    color: #fff;
+    margin: 0 auto;
+    background-color: #8a8a75;
+    max-width: 80%;
+    min-width: 500px;
+    text-align: center;
 }
 
 .dot {

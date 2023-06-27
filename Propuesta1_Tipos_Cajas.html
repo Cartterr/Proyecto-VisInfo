@@ -4,10 +4,33 @@
     <meta charset="utf-8">
     <title>Pokemon Stats Boxplot</title>
     <link rel="stylesheet" href="Propuesta1_Tipos_Cajas.css">
+    <style>
+        .type-list-container {
+            overflow-x: auto;
+        }
+
+        .type-list {
+            display: flex;
+            white-space: nowrap;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .type-list li {
+            margin-right: 10px;
+        }
+    </style>
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <h1>Pokemon Stats Boxplot</h1>
+    <div>
+        <label for="typeSelect">Seleccione el Tipo:</label>
+        <div class="type-list-container">
+            <ul class="type-list" id="typeList"></ul>
+        </div>
+    </div>
     <div id="boxplot"></div>
     <script src="Propuesta1_Tipos_Cajas.js"></script>
 </body>
