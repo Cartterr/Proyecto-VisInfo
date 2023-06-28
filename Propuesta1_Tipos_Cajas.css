@@ -17,24 +17,6 @@ body {
     fill: #456b86;
 }
 
-.tooltip {
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    top: -40px; /* Agregado */
-    left: 0; /* Agregado */
-    width: 100px; /* Agregado */
-    text-align: center; /* Agregado */
-}
-
-.box:hover .tooltip {
-    opacity: 1;
-}
-
 .median {
     stroke: white;
     stroke-width: 2px;
@@ -128,4 +110,20 @@ text {
 
 #description strong {
     font-weight: bold;
+}
+
+.back-button-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 4px;
 }

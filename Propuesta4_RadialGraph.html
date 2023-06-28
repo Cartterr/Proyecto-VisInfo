@@ -9,17 +9,23 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
+
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">Volver</a>
+    </div>
+    
     <h1>Pokemon Grafico Radial</h1>
+    
     <div id="searchContainer">
         <div id="searchbox">
             <input id="pokemonSearch" class="awesomplete" type="text" placeholder="Search for a Pokémon..." />
             <button id="addPokemon">Mostrar / Esconder</button>
         </div>
     </div>
-    
-    
+
+    <label for="typeSelect">Seleccione un pokemon:</label>
+
     <div id="radialGraph"></div>
-    <h2>Elige Un Pokemon</h2>
     <div id="pokemonList"></div>
     <div id="analyzedPokemons">Pokemones Activados:</div>
     <div id="description">

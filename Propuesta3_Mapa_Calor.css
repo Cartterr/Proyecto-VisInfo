@@ -1,27 +1,23 @@
 body {
     margin: 0 auto;
-    background-color: #8a8a75;
+    background-color: #222;
     max-width: 80%;
     min-width: 500px;
     text-align: center;
+    color: white;
 }
 
 .response {
     text-align: start;
-    border: solid gray 2px;
+    border: solid rgb(255, 255, 255) 2px;
     padding: 10px;
     margin: 10px;
 }
 
-.row-label {
+.row-label, .column-label {
     font-weight: bold;
+    fill: white; /* Modificado para los textos generados por el código JavaScript */
 }
-
-.column-label {
-    font-weight: bold;
-    text-align: left;
-}
-
 
 #description {
     text-align: justify;
@@ -30,6 +26,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin-top: -140px;
+    color: white; /* Agregado para los textos del div "description" */
 }
 
 #description p {
@@ -47,4 +44,20 @@ body {
 
 #description strong {
     font-weight: bold;
+}
+
+.back-button-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 4px;
 }
