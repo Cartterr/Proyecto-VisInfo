@@ -41,13 +41,11 @@ d3.csv("pokemon.csv").then(data => {
         y.domain([0, d3.max(typeStats, d => d3.max(d))]);
 
         svg.select(".x-axis")
-            .transition()
-            .duration(500)
             .call(xAxis);
 
         svg.select(".y-axis")
             .transition()
-            .duration(500)
+            .duration(250)
             .call(yAxis);
 
         const boxWidth = Math.min(50, x.bandwidth());
@@ -55,6 +53,8 @@ d3.csv("pokemon.csv").then(data => {
         svg.selectAll(".box")
             .data(typeStats)
             .join("rect")
+            .transition()
+            .duration(450)
             .attr("class", "box")
             .attr("x", (d, i) => x(statNames[i]) + (x.bandwidth() - boxWidth) / 2)
             .attr("width", boxWidth)
@@ -64,45 +64,16 @@ d3.csv("pokemon.csv").then(data => {
         typeList.selectAll("li")
             .classed("selected", d => d === selectedType);
         
-
         svg.selectAll(".median")
             .data(typeStats)
             .join("line")
+            .transition()
+            .duration(450)
             .attr("class", "median")
             .attr("x1", (d, i) => x(statNames[i]) + (x.bandwidth() - boxWidth) / 2)
             .attr("x2", (d, i) => x(statNames[i]) + (x.bandwidth() + boxWidth) / 2)
             .attr("y1", d => y(d3.median(d)))
-            .attr("y2", d => y(d3.median(d)));
-        
-            svg.selectAll(".box")
-            .data(typeStats)
-            .join("rect")
-            .attr("class", "box")
-            .attr("x", (d, i) => x(statNames[i]) + (x.bandwidth() - boxWidth) / 2)
-            .attr("width", boxWidth)
-            .attr("y", d => y(d3.quantile(d, 0.75)))
-            .attr("height", d => y(d3.quantile(d, 0.25)) - y(d3.quantile(d, 0.75)))
-            .on("mouseover", function(d) {
-                const tooltip = d3.select(this.parentNode)
-                    .append("div")
-                    .attr("class", "tooltip")
-                    .html(`Q1: ${d3.quantile(d, 0.25)}<br>Median: ${d3.median(d)}<br>Q3: ${d3.quantile(d, 0.75)}`)
-                    .style("top", `${y(d3.median(d)) - 30}px`) // Posiciona el tooltip sobre el box
-                    .style("left", `${parseFloat(d3.select(this).attr("x")) + boxWidth / 2}px`); // Centra el tooltip horizontalmente
-        
-                d3.select(this)
-                    .attr("opacity", 0.7); // Cambia la opacidad del box al hacer hover
-            })
-            .on("mouseout", function() {
-                d3.select(this.parentNode)
-                    .select(".tooltip")
-                    .remove();
-        
-                d3.select(this)
-                    .attr("opacity", 1); // Restaura la opacidad del box al quitar el hover
-            });
-        
-        
+            .attr("y2", d => y(d3.median(d)));        
     };
 
     const typeList = d3.select("#typeList");
