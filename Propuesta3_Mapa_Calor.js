@@ -39,18 +39,6 @@ d3.csv("typing_chart.csv").then(function(data) {
        .style("stroke-width", "0.1")
        .style("fill", function(d) { return colorScale(d.value); });
 
-  // Agrega etiquetas de texto sobre las celdas
-  // cells.selectAll("text")
-  //      .data(function(d) { return types.map(function(type) { return { type: type, value: +d[type] }; }); })
-  //      .enter()
-  //      .append("text")
-  //      .attr("x", function(d, i) { return (i + 0.5) * (chartWidth / types.length); })
-  //      .attr("y", (chartHeight / rows.length) / 2)
-  //      .attr("text-anchor", "middle")
-  //      .attr("dominant-baseline", "middle")
-  //      .attr("dy", "0.35em") // Ajusta la posición vertical del texto
-  //      .text(function(d) { return d.value; });
-
   chartGroup.selectAll(".row-label")
             .data(rows)
             .enter()
