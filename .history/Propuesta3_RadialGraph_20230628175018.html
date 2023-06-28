@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pokemon Grafico Radial</title>
+    <link rel="stylesheet" href="Propuesta3_RadialGraph.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">Volver</a>
+    </div>
+    
+    <h1>Pokemon Grafico Radial</h1>
+    
+    <div id="searchContainer">
+        <div id="searchbox">
+            <input id="pokemonSearch" class="awesomplete" type="text" placeholder="Search for a Pokémon..." />
+            <button id="addPokemon">Mostrar / Esconder</button>
+        </div>
+    </div>
+
+    <label for="typeSelect">Seleccione un pokemon:</label>
+
+    <div id="radialGraph"></div>
+    <div id="pokemonList"></div>
+    <div id="analyzedPokemons">Pokemones Activados:</div>
+    <div id="description">
+        <p>El gráfico radial muestra las estadísticas de cada Pokémon. Puedes seleccionar un Pokémon por su nombre.</p>
+
+        <p>Las estadísticas disponibles son:</p>
+        <ul>
+            <li><strong>HP:</strong> Puntos de Salud (Health Points) representan la vitalidad del Pokémon.</li>
+            <li><strong>Ataque:</strong> Representa la capacidad ofensiva del Pokémon en batalla.</li>
+            <li><strong>Defensa:</strong> Representa la capacidad defensiva del Pokémon ante los ataques enemigos.</li>
+            <li><strong>Ataque Especial (Sp. Atk):</strong> Representa la capacidad ofensiva especial del Pokémon, como ataques especiales elementales.</li>
+            <li><strong>Defensa Especial (Sp. Def):</strong> Representa la capacidad defensiva especial del Pokémon, como resistencia a ataques especiales.</li>
+            <li><strong>Velocidad (Speed):</strong> Representa la rapidez del Pokémon y determina qué Pokémon ataca primero en batalla.</li>
+        </ul>
+
+        <p>Es importante tener en cuenta que un Pokémon puede tener 1 o 2 tipos. Por ejemplo, un Pokémon puede ser del "Tipo 1" y/o "Tipo 2".</p>
+    </div>
+    
+
+    <script src="Propuesta4_RadialGraph.js"></script>
+</body>
+</html>
