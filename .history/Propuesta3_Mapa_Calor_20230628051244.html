@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Propuesta3_Mapa_Calor.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <title>Typing Chart</title>
+
+    </head>
+    <body>
+        <div class="row">
+            <div class="columns">
+                <h2>Efectividad Entre Tipos</h2>
+                <svg id="chart"></svg>
+            </div>
+        </div>
+        <script src="Propuesta3_Mapa_Calor.js"></script>
+
+        <div id="description">
+            <h3>Description:</h3>
+            <p>The graph above represents a heatmap illustrating the effectiveness between different types of Pokémon. Each type is indicated by color, and the heatmap shows which types are more effective against each other.</p>
+            
+            <h3>Stat Definitions:</h3>
+            <ul>
+                <li><strong>HP</strong>: Hit Points - Represents the Pokémon's health or vitality.</li>
+                <li><strong>Attack</strong>: Determines the strength of the Pokémon's physical moves.</li>
+                <li><strong>Defense</strong>: Measures the Pokémon's ability to withstand physical attacks.</li>
+                <li><strong>Sp. Atk</strong>: Special Attack - Determines the power of the Pokémon's special moves.</li>
+                <li><strong>Sp. Def</strong>: Special Defense - Measures the Pokémon's ability to withstand special attacks.</li>
+                <li><strong>Speed</strong>: Represents the Pokémon's agility and determines its order of action in battles.</li>
+            </ul>
+            
+            <p>It is important to note that a Pokémon can have one or two types (Type 1 and/or Type 2). This means that their effectiveness will be considered for both types when analyzing the heatmap.</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pokemon Stats Boxplot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <h1>Pokemon Stats Boxplot</h1>
+    <link rel="stylesheet" href="Propuesta1_Tipos_Cajas.css">
+    <div>
+        <label for="typeSelect">Seleccione el Tipo:</label>
+        <div class="type-list-container">
+            <ul class="type-list" id="typeList"></ul>
+        </div>
+    </div>
+    <div id="boxplot"></div>
+    <h1>Pokemon Tipo1 y Tipo2 Treemap</h1>
+    <label for="typeSelect">Seleccione el Tipo De Pokemon Que Quiere Ver En BoxPlot:</label>
+    <div id="treemap"></div>
+
+    <div id="description">
+        <h2>Descripción de los Gráficos</h2>
+        <p>
+            El primer gráfico es un boxplot que muestra las estadísticas de los pokémon 
+            clasificadas por tipo. Cada tipo de pokémon tiene su propia caja en el gráfico, 
+            representando la distribución de sus estadísticas. Las estadísticas incluyen HP, 
+            Ataque, Defensa, Ataque Especial (Sp. Atk), Defensa Especial (Sp. Def) y 
+            Velocidad (Speed). Por ejemplo, "Sp. Def" se refiere a la estadística de Defensa Especial.
+        </p>
+        <p>
+            Es importante tener en cuenta que un pokémon puede tener 1 o 2 tipos. Por lo tanto, 
+            se mostrará en los boxplots tanto para el Tipo 1 como para el Tipo 2, si tiene uno. 
+            Esto permite comparar las estadísticas entre diferentes tipos de pokémon y comprender 
+            sus fortalezas y debilidades.
+        </p>
+        <p>
+            El segundo gráfico es un TreeMap que representa la cantidad de pokémon por su Tipo 1 
+            y Tipo 2 (si aplica). Cada cuadrado en el TreeMap representa un tipo de pokémon, y los 
+            cuadrados del mismo color muestran el Tipo 1 de cada pokémon. Además, se muestra la 
+            cantidad respectiva para las otras subcategorías que representan el Tipo 2. 
+            Este gráfico permite visualizar la distribución de los tipos de pokémon y la 
+            cantidad de pokémon en cada categoría.
+        </p>
+    </div>
+    
+
+    <script src="Propuesta1_Tipos_Cajas.js"></script>
+</body>
+</html>

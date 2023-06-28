@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pokemon Stats Boxplot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <h1>Pokemon Stats Boxplot</h1>
+    <link rel="stylesheet" href="Propuesta1_Tipos_Cajas.css">
+    <div>
+        <label for="typeSelect">Seleccione el Tipo:</label>
+        <div class="type-list-container">
+            <ul class="type-list" id="typeList"></ul>
+        </div>
+    </div>
+    <div id="boxplot"></div>
+    <h1>Pokemon Tipo1 y Tipo2 Treemap</h1>
+    <label for="typeSelect">Seleccione el Tipo De Pokemon Que Quiere Ver En BoxPlot:</label>
+    <div id="treemap"></div>
+
+    <p>The boxplots show the distribution of Pokemon stats for each type. The first graph shows the distribution of all stats, while the second graph shows the distribution of only the attack and defense stats. The boxplots use a standard format to represent the five-number summary of the data:</p>
+
+    <ul>
+    <li>The minimum value is the smallest value in the data set.</li>
+    <li>The first quartile (Q1) is the value below which 25% of the data points fall.</li>
+    <li>The median is the value in the middle of the data set.</li>
+    <li>The third quartile (Q3) is the value above which 75% of the data points fall.</li>
+    <li>The maximum value is the largest value in the data set.</li>
+    </ul>
+
+    <p>The whiskers extend from the box to the smallest and largest data points that are within 1.5 times the interquartile range (IQR) of the median. Data points that fall outside the whiskers are considered outliers.</p>
+
+    <p>The treemap shows the distribution of Pokemon by their type 1 and type 2 (if applicable). The size of each rectangle represents the number of Pokemon in that category. The colors of the rectangles represent the different types.</p>
+
+    <p>It is important to note that a Pokemon can have 1 or 2 types. Por ejemplo, Bulbasaur es un Pokemon de tipo Hierba/Veneno. Esto significa que se contará en los boxplots tanto para el tipo Hierba como para el tipo Veneno.</p> <p><strong>Pokemon de tipo Hierba/Veneno</strong>.
+
+    <script src="Propuesta1_Tipos_Cajas.js"></script>
+</body>
+</html>

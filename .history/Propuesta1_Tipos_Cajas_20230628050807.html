@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pokemon Stats Boxplot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <h1>Pokemon Stats Boxplot</h1>
+    <link rel="stylesheet" href="Propuesta1_Tipos_Cajas.css">
+    <div>
+        <label for="typeSelect">Seleccione el Tipo:</label>
+        <div class="type-list-container">
+            <ul class="type-list" id="typeList"></ul>
+        </div>
+    </div>
+    <div id="boxplot"></div>
+    <h1>Pokemon Tipo1 y Tipo2 Treemap</h1>
+    <label for="typeSelect">Seleccione el Tipo De Pokemon Que Quiere Ver En BoxPlot:</label>
+    <div id="treemap"></div>
+
+    <div id="description">
+        <p>El diagrama de caja muestra la distribución de las estadísticas de los Pokémon para cada
+            tipo. Mientras que el segundo gráfico muestra un TreeMap que representa la cantidad de
+            tipo1 y sub tipo2 en donde los cuadros con el mismo color muestran el tipo1 de cada pokemon,
+            junto a la cantidad respectiva para los otros sub categorias que muestran los tipos2. 
+            Los diagramas de caja utilizan un formato estándar para representar el resumen de cinco 
+            números de los datos:</p>
+    
+        <ul>
+            <li>El valor mínimo es el valor más pequeño en el conjunto de datos.</li>
+            <li>El primer cuartil (Q1) es el valor por debajo del cual cae el 25% de los puntos de datos.</li>
+            <li>La mediana es el valor en el medio del conjunto de datos.</li>
+            <li>El tercer cuartil (Q3) es el valor por encima del cual cae el 75% de los puntos de datos.</li>
+            <li>El valor máximo es el valor más grande en el conjunto de datos.</li>
+        </ul>
+    
+        <p>Los bigotes se extienden desde la caja hasta los puntos de datos más pequeños y más 
+            grandes que se encuentran dentro de 1.5 veces el rango intercuartílico (IQR) de la mediana. 
+            Los puntos de datos que caen fuera de los bigotes se consideran valores atípicos.</p>
+    
+        <p>El treemap muestra la distribución de los Pokémon según su tipo 1 y tipo 2 (si corresponde). 
+            El tamaño de cada rectángulo representa la cantidad de Pokémon en esa categoría. Los colores 
+            de los rectángulos representan los diferentes tipos.</p>
+    
+        <p>Es importante tener en cuenta que un Pokémon puede tener 1 o 2 tipos. Por ejemplo, Bulbasaur 
+            es un Pokémon de tipo Hierba/Veneno. Esto significa que se contará en los diagramas de caja 
+            tanto para el tipo Hierba como para el tipo Veneno.</p> <p><strong>Pokémon de tipo Hierba/Veneno</strong>.
+    </div>
+    
+
+    <script src="Propuesta1_Tipos_Cajas.js"></script>
+</body>
+</html>

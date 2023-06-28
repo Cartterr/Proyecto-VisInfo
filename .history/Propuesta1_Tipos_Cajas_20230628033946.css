@@ -1,0 +1,100 @@
+body {
+    margin: 0 auto;
+    background-color: #222;
+    color: white;
+    max-width: 80%;
+    min-width: 500px;
+    text-align: center;
+}
+
+.box {
+    fill: #1f77b4;
+    cursor: pointer;
+    position: relative; /* Agregado */
+}
+
+.box:hover {
+    fill: #456b86;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    top: -40px; /* Agregado */
+    left: 0; /* Agregado */
+    width: 100px; /* Agregado */
+    text-align: center; /* Agregado */
+}
+
+.box:hover .tooltip {
+    opacity: 1;
+}
+
+.median {
+    stroke: white;
+    stroke-width: 2px;
+}
+
+.axis text {
+    font-size: 13px;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: white;
+    shape-rendering: crispEdges;
+}
+
+.type-list-container {
+    display: flex;
+    justify-content: center;
+}
+
+.type-list {
+    display: flex;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.type-list li {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.type-list li:hover {
+    transform: scale(1.1);
+}
+
+.type-list li.selected {
+    transform: scale(1.2);
+    font-weight: bold;
+    color: #1f77b4;
+}
+
+.type-list-container {
+    overflow-y: hidden;
+}
+
+.type-list {
+    display: flex;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.type-list li {
+    margin-right: 10px;
+}
+
+text {
+    font-size: 10px;
+}
